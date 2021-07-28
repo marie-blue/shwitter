@@ -1,0 +1,2 @@
+class Shweet < ApplicationRecord
+end

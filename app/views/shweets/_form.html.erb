@@ -1,0 +1,22 @@
+<%= form_with(model: shweet, local: true) do |form| %>
+  <% if shweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shweet.errors.count, "error") %> prohibited this shweet from being saved:</h2>
+
+      <ul>
+        <% shweet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :shweet %>
+    <%= form.text_area :shweet %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shweets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shweet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shweets.each do |shweet| %>
+      <tr>
+        <td><%= shweet.shweet %></td>
+        <td><%= link_to 'Show', shweet %></td>
+        <td><%= link_to 'Edit', edit_shweet_path(shweet) %></td>
+        <td><%= link_to 'Destroy', shweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shweet', new_shweet_path %>
